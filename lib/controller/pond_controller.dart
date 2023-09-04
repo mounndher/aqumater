@@ -31,7 +31,7 @@ class pondControllerImp extends pondController {
       for (int i = 0; i < pondnameControllers.length; i++) {
         
         var response = await signupData.postdata(
-            pondnameControllers[i].text, pondtypeControllers[i].text);
+            pondnameControllers[i].text, pondtypeControllers[i].text,farmid!);
 
         print("=============================== Controller $response ");
         statusRequest = handlingData(response);

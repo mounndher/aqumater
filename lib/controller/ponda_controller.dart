@@ -56,7 +56,7 @@ class pondaControllerImp extends pondaController {
         data.addAll(datalist.map((e) => FarmModel.fromJson(e)));
         for (int i = 0; i < data.length; i++) {
           dropdownlist.add(SelectedListItem(
-              name: data[i].farmname!, value: data[i].farmname));
+              name: data[i].farmname!, value: data[i].farmId));
         }
       } else {
         statusRequest = StatusRequest.failure;
@@ -77,7 +77,7 @@ class pondaControllerImp extends pondaController {
         if (response['status'] == "success") {
           Get.offNamed(Approutes.pond, arguments: {
            "pondnumber": pondnumber.text,
-           // "farmid": farmid.text
+            "farmid": farmid.text
           });
           print("===================================================="+farmid.text+"=============="+farmnme.text);
         } else {

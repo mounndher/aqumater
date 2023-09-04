@@ -41,7 +41,9 @@ class _CustomdropdownSearchState extends State<CustomdropdownSearch> {
         selectedItems: (List<dynamic> selectedList) {
           SelectedListItem selectedListItem = selectedList[0];
           widget.dropDownSelectedname.text = selectedListItem.name;
-            widget.dropDownSelectedid.text = selectedListItem.value!;
+          widget.dropDownSelectedid.text = selectedListItem.value!;
+          print("name"+widget.dropDownSelectedname.text);
+          print("id"+widget.dropDownSelectedid.text);
         },
       ),
     ).showModal(context);
